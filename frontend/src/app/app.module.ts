@@ -15,6 +15,7 @@ import { FullLayoutComponent } from './layouts/full-layout/full-layout.component
 import { LayoutAppComponent } from './layouts/layout-app/layout-app.component';
 import { SharedModule } from './shared/shared.module';
 import { TemplateModule } from './shared/template/template.module';
+import { AppsService } from './shared/services/apps.service';
 
 registerLocaleData(en);
 
@@ -35,6 +36,7 @@ registerLocaleData(en);
     TemplateModule
   ],
   providers: [
+    AppsService,
     { provide: NZ_I18N, useValue: en_US }
   ],
   bootstrap: [AppComponent]

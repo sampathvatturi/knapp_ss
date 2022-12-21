@@ -47,6 +47,8 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 // import { ProductComponent } from './e-commerce/product/product.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { AppsService } from '../shared/services/apps.service';
+import { SharedModule } from '../shared/shared.module';
 const antdModule = [
     NzButtonModule,
     NzCardModule,
@@ -78,12 +80,13 @@ const antdModule = [
     imports: [
         ReactiveFormsModule,
         AppsRoutingModule,
-        ...antdModule
+        ...antdModule,
+        SharedModule
     ],
     declarations: [
     
     ],
-    providers: [
+    providers: [AppsService
       
     ]
 }) 

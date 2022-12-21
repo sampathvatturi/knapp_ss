@@ -9,6 +9,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { ThemeConstantService } from './services/theme-constant.service';
 import { HeaderService } from './services/header.service';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 
 // import { SearchPipe } from './pipes/search.pipe';
 // import { FilterPipe } from './pipes/filter.pipe';
@@ -30,15 +32,17 @@ import { HeaderService } from './services/header.service';
         PerfectScrollbarModule,
         // SearchPipe,FilterPipe,FiltergrpPipe,
         // LoadingComponent,InnerLoadingComponent,PgHeaderComponent,
-        NzToolTipModule
+        NzToolTipModule,
+        NzDropDownModule,
+        NzAvatarModule
     ],
     imports: [
-        RouterModule,
+    RouterModule,
         CommonModule,
         NzIconModule, 
         NzToolTipModule,
         PerfectScrollbarModule, 
-        // NzButtonModule
+        NzButtonModule
     ],
     declarations: [
         // SearchPipe,FilterPipe,FiltergrpPipe,
