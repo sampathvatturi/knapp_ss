@@ -16,6 +16,8 @@ import { LayoutAppComponent } from './layouts/layout-app/layout-app.component';
 import { SharedModule } from './shared/shared.module';
 import { TemplateModule } from './shared/template/template.module';
 import { AppsService } from './shared/services/apps.service';
+import { KeyboardShortcutsModule } from "ng-keyboard-shortcuts";
+
 
 registerLocaleData(en);
 
@@ -33,7 +35,9 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    TemplateModule
+    TemplateModule,
+    KeyboardShortcutsModule.forRoot(),
+
   ],
   providers: [
     AppsService,

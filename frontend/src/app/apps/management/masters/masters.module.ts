@@ -6,6 +6,7 @@ import { DepartmentComponent } from './department/department.component';
 import { WorksComponent } from './works/works.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { UomComponent } from './uom/uom.component';
+import { DxButtonModule, DxDataGridModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { UomComponent } from './uom/uom.component';
   ],
   imports: [
     CommonModule,
-    MastersRoutingModule
+    MastersRoutingModule,
+    DxDataGridModule,
+    DxButtonModule,
   ]
 })
 export class MastersModule { }

@@ -13,6 +13,7 @@ import { ApprovalsComponent } from './approvals/approvals.component';
 import { TenderModule } from './tender/tender.module';
 import { AccountingModule } from './accounting/accounting.module';
 import { MastersModule } from './masters/masters.module';
+import { DxDataGridModule, DxButtonModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { MastersModule } from './masters/masters.module';
     ManagementRoutingModule,
     TenderModule,
     AccountingModule,
-    MastersModule
+    MastersModule,
+    DxDataGridModule,
+    DxButtonModule
   ]
 })
 export class ManagementModule { }
