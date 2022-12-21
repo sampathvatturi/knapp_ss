@@ -2,7 +2,7 @@
   "mainMenu": [
     {
       "title": "Dashboard",
-      "path": "modules/dashboard",
+      "path": "/internal/management/dashboard",
       "icon": "user",
       "children":[]
     },
@@ -11,46 +11,46 @@
       "icon": "user",
       "children":[
         {"title":"Tender Details",
-          "path":"modules/create-tender",
+          "path":"/internal/management/tender/tender-details",
           "icon": "user"
         },
         {
           "title":"Assign Tender",
-          "path":"modules/assign-tender",
+          "path":"/internal/management/tender/assign-tender",
           "icon": "user"
         }
       ]
     },
     {
       "title": "Survey Report",
-      "path": "modules/survey-report",
+      "path": "/internal/management/survey-report",
       "icon": "user",
       "children":[]
     },
     {
       "title": "Work Orders",
-      "path": "modules/work-orders",
+      "path": "/internal/management/work-orders",
       "icon": "user",
       "children":[]
 
     },
     {
       "title": "Expenditure",
-      "path": "modules/expenditure",
+      "path": "/internal/management/expenditure",
       "icon": "user",
       "children":[]
 
     },
     {
       "title": "Invoices",
-      "path": "modules/invoices",
+      "path": "/internal/management/invoices",
       "icon": "user",
       "children":[]
 
     },
     {
       "title": "Vendors",
-      "path": "modules/vendors",
+      "path": "/internal/management/vendors",
       "icon": "user",
       "children":[]
 
@@ -61,31 +61,31 @@
       "children": [        
         {
           "title": "Funds",
-          "path": "modules/funds",
+          "path": "/internal/management/accounting/funds",
           "icon": "user"
         },
         {
           "title": "Accounts",
-          "path": "modules/accounts",
+          "path": "/internal/management/accounting/accounts",
           "icon": "user"
         },
         {
           "title": "Transactions",
-          "path": "modules/transactions",
+          "path": "/internal/management/accounting/transactions",
           "icon": "user"
         }
       ]
     },
     {
       "title": "User Accounts",
-      "path": "modules/user-accounts",
+      "path": "/internal/management/user-accounts",
       "icon": "user",
       "children":[]
 
     },
     {
       "title": "Approvals",
-      "path": "modules/approvals",
+      "path": "/internal/management/approvals",
       "icon": "user",
       "children":[]
 
@@ -96,22 +96,22 @@
       "children": [        
         {
           "title": "Department",
-          "path": "modules/department",
+          "path": "/internal/management/masters/department",
           "icon": "user"
         }, 
         {
           "title": "Works",
-          "path": "modules/works",
+          "path": "/internal/management/masters/works",
           "icon": "user"
         },
         {
           "title": "Inventory",
-          "path": "modules/inventory-items",
+          "path": "/internal/management/masters/inventory",
           "icon": "user"
         },      
         {
           "title": "UOM",
-          "path": "modules/uom",
+          "path": "/internal/management/masters/uom",
           "icon": "user"
         }
       ]
