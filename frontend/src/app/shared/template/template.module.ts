@@ -25,6 +25,7 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { QuickViewComponent } from './quick-view/quick-view.component';
 
 const antdModule = [
     NzAvatarModule,
@@ -46,7 +47,8 @@ const antdModule = [
         // SideNavDirective,
         FooterComponent,
         HeaderComponent,
-        SidenavComponent
+        SidenavComponent,
+        QuickViewComponent
     ],
     imports: [
         RouterModule,
@@ -60,7 +62,8 @@ const antdModule = [
 
         FooterComponent,
           HeaderComponent,
-          SidenavComponent
+          SidenavComponent,
+          QuickViewComponent
     ],
     providers: [ 
         ThemeConstantService
