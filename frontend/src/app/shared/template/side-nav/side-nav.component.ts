@@ -12,11 +12,11 @@ import { AppsService } from '../../services/apps.service';
 
 export class SideNavComponent{
 
-    public menuItems: any[]
-    public menuItems2: any[]
-    isFolded : boolean;
-    isSideNavDark : boolean;
-    isExpand : boolean;
+    public menuItems: any[] =[];
+    public menuItems2: any[] = [];
+    isFolded : boolean | undefined;
+    isSideNavDark : boolean | undefined;
+    isExpand : boolean | undefined;
 
     loader: boolean = true;
     clntDtls: any;
@@ -29,7 +29,7 @@ export class SideNavComponent{
         this.themeService.isExpandChanges.subscribe(isExpand => this.isExpand = isExpand);
         this.themeService.isSideNavDarkChanges.subscribe(isDark => this.isSideNavDark = isDark);
 
-        this.clntDtls = JSON.parse(localStorage.getItem('clients'));
+        // this.clntDtls = JSON.parse(localStorage.getItem('clients'));
        this.gstMnuItmsLst();
     }
  
@@ -49,7 +49,7 @@ export class SideNavComponent{
     this.loader = true;
     const rte = `auth2/admin/menu`;
     console.log("calling  -- gstMnuItmsLst ::"+rte)
-    this.apiSrv.get(rte).subscribe((res) => {
+    this.apiSrv.get(rte).subscribe((res:any) => {
         console.log(res)
       this.loader = false;
       if (res['status'] == 200) {

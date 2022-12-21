@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
 import { FullLayoutComponent } from './layouts/full-layout/full-layout.component';
 import { LayoutAppComponent } from './layouts/layout-app/layout-app.component';
+import { SharedModule } from './shared/shared.module';
+import { TemplateModule } from './shared/template/template.module';
 
 registerLocaleData(en);
 
@@ -28,7 +30,9 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule,
+    TemplateModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

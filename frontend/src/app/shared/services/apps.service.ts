@@ -31,20 +31,20 @@ export class AppsService {
 
 
 
-  create(postdata, rte) {
+  create(postdata: any, rte: any) {
     return this.http.post(`/${rte}`, { data: postdata });
   }
-  put(postdata, rte) {
+  put(postdata: any, rte: any) {
     return this.http.put(`/${rte}`, { data: postdata });
   }
-  post(postdata, rte) {
+  post(postdata: any, rte: string | string[]) {
     if (rte.indexOf("http") > -1) {
       return this.http.post(`${rte}`, postdata);
     } else {
       return this.http.post(`/${rte}`, postdata);
     }
   }
-  get(rte) {
+  get(rte: string | string[]) {
     console.log("GET route ::" + rte)
     if (rte.indexOf("http") > -1) {
       return this.http.get(`${rte}`);
@@ -53,10 +53,10 @@ export class AppsService {
     }
 
   }
-  update(postdata, rte) {
+  update(postdata: any, rte: any) {
     return this.http.put(`/${rte}`, postdata);
   }
-  delete(rte) {
+  delete(rte: any) {
     return this.http.delete(`/${rte}`);
   }
 

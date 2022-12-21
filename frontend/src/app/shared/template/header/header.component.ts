@@ -14,18 +14,18 @@ export class HeaderComponent{
 
     searchVisible : boolean = false;
     quickViewVisible : boolean = false;
-    isFolded : boolean;
-    isExpand : boolean;
+    isFolded : boolean | undefined;
+    isExpand : boolean | undefined;
     clntDtls: any;
     usrDtls: any;
     setting={ header_title : "" }
     data={"short_lbl":""}
-    id: string;
-    folder_id$: Observable<string>;
+    id: string | undefined;
+    folder_id$: Observable<string> | undefined;
     constructor( private themeService: ThemeConstantService, public router: Router,public apiSrv: AppsService, private notification: NzNotificationService
                                      ,private headerService: HeaderService) {
-        this.clntDtls = JSON.parse(localStorage.getItem('clients'));
-        this.usrDtls = JSON.parse(localStorage.getItem('userdata'));
+        // this.clntDtls = JSON.parse(localStorage.getItem('clients'));
+        // this.usrDtls = JSON.parse(localStorage.getItem('userdata'));
         this.data.short_lbl = this.usrDtls.fst_nm.substring(0, 1)+this.usrDtls.lst_nm.substring(0, 1);
 
         
@@ -102,7 +102,7 @@ export class HeaderComponent{
         console.log("logout")
        
         this.apiSrv.get("auth2/admin/logout")
-            .subscribe(res => {
+            .subscribe((res:any) => {
                 if (res['status'] == 200) {
                     localStorage.clear();
                     this.router.navigateByUrl('internal');
