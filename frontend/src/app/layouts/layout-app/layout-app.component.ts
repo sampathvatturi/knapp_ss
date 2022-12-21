@@ -10,11 +10,11 @@ import { ThemeConstantService } from './../../shared/services/theme-constant.ser
 export class LayoutAppComponent implements OnInit {
   selectedHeaderColor: string = '';
   empdata: any;
-  isFolded: boolean = false;
-  isSideNavDark: boolean = false;
-  isExpand: boolean = true;
+  isFolded!: boolean;
+  isSideNavDark!: boolean;
+  isExpand!: boolean;
   url:string ='';
-  full_screen:boolean = false;
+  full_screen!:boolean;
   constructor(private router: Router, private themeService:ThemeConstantService ) { }
 
   ngOnInit(): void {

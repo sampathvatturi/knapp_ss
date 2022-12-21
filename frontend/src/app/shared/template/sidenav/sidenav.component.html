@@ -1,1 +1,30 @@
-<p>sidenav works!</p>
+<perfect-scrollbar class="side-nav" sideNav>
+
+    <ul  nz-menu nzMode="inline" [nzInlineCollapsed]="isFolded" [nzTheme]="isSideNavDark ? 'dark' : 'light'">
+        <ng-container *ngFor="let item of menuItems">
+            <li *ngIf="item.children.length == 0" nz-menu-item
+                nz-tooltip
+                nzTooltipPlacement="right"
+                [nzTooltipTitle]="isFolded ? item.title: ''"
+                [routerLink]="item.path">
+                <span nz-icon [nzType]="item.icon"></span>
+                <span>{{item.title}}</span>
+            </li>
+
+
+            <li  *ngIf="item.children.length > 0" 
+                nz-submenu [nzTitle]="item.title" 
+                [nzIcon]="item.icon">
+                <ul>
+                    <li nz-menu-item *ngFor="let subItem of item.children"
+                        [routerLink]="subItem.path">
+                        {{subItem.title}}
+                    </li>
+                </ul>
+            </li>
+        </ng-container>
+
+
+      </ul>
+
+</perfect-scrollbar>    

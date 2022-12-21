@@ -1,6 +1,6 @@
 // @import url('./assets/lib/hljs/styles/atom-one-light.css');
-// @import url('../node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css');
-// @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+@import url('../node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css');
+@import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 // @import './assets/scss/app.scss';
 // @import './assets/css/leaflet.draw.css';
 @import './assets/scss/app.scss';
@@ -892,4 +892,8 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 .scrl::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.footer .footer-content {
+    font-size: 11px;
 }

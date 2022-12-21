@@ -26,6 +26,8 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { QuickViewComponent } from './quick-view/quick-view.component';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 const antdModule = [
     NzAvatarModule,
@@ -38,7 +40,9 @@ const antdModule = [
     NzSwitchModule,
     NzInputModule,
     NzButtonModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzLayoutModule,
+    NzIconModule
 ]
 
 @NgModule({

@@ -1,0 +1,120 @@
+{
+  "mainMenu": [
+    {
+      "title": "Dashboard",
+      "path": "modules/dashboard",
+      "icon": "user",
+      "children":[]
+    },
+    {
+      "title": "Tender",
+      "icon": "user",
+      "children":[
+        {"title":"Tender Details",
+          "path":"modules/create-tender",
+          "icon": "user"
+        },
+        {
+          "title":"Assign Tender",
+          "path":"modules/assign-tender",
+          "icon": "user"
+        }
+      ]
+    },
+    {
+      "title": "Survey Report",
+      "path": "modules/survey-report",
+      "icon": "user",
+      "children":[]
+    },
+    {
+      "title": "Work Orders",
+      "path": "modules/work-orders",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Expenditure",
+      "path": "modules/expenditure",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Invoices",
+      "path": "modules/invoices",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Vendors",
+      "path": "modules/vendors",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Accouting",
+      "icon": "user",
+      "children": [        
+        {
+          "title": "Funds",
+          "path": "modules/funds",
+          "icon": "user"
+        },
+        {
+          "title": "Accounts",
+          "path": "modules/accounts",
+          "icon": "user"
+        },
+        {
+          "title": "Transactions",
+          "path": "modules/transactions",
+          "icon": "user"
+        }
+      ]
+    },
+    {
+      "title": "User Accounts",
+      "path": "modules/user-accounts",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Approvals",
+      "path": "modules/approvals",
+      "icon": "user",
+      "children":[]
+
+    },
+    {
+      "title": "Masters",
+      "icon": "user",
+      "children": [        
+        {
+          "title": "Department",
+          "path": "modules/department",
+          "icon": "user"
+        }, 
+        {
+          "title": "Works",
+          "path": "modules/works",
+          "icon": "user"
+        },
+        {
+          "title": "Inventory",
+          "path": "modules/inventory-items",
+          "icon": "user"
+        },      
+        {
+          "title": "UOM",
+          "path": "modules/uom",
+          "icon": "user"
+        }
+      ]
+    }
+  ]
+}
