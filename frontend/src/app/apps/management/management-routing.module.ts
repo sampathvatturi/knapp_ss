@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:'vendors', component:VendorsComponent},
   {path:'user-accounts', component:UserAccountsComponent},
   {path:'approvals', component:ApprovalsComponent},
+  { path: '**', redirectTo: 'dashboard' }
 ];
 
 @NgModule({

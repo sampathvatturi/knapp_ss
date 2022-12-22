@@ -14,7 +14,8 @@ import { LayoutAppComponent } from '../layouts/layout-app/layout-app.component';
 // import { AuthGuardService } from '../apps/auth/auth-guard.service';
 
 const routes: Routes = [
-    {path:'management', loadChildren:()=> import('../apps/management/management.module').then(m => m.ManagementModule)}
+    {path:'management', loadChildren:()=> import('../apps/management/management.module').then(m => m.ManagementModule)},
+    { path: '**', redirectTo: 'management' },
 ];
 
 @NgModule({

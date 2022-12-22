@@ -10,7 +10,7 @@ const routes: Routes = [
   // { path: 'auth', component: FullLayoutComponent, loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
 
   // { path: 'internal/expenses'         , component: LayoutAppComponent, canActivate: [AuthGuardService], loadChildren: () => import('./apps/expenses/expenses.module').then(m => m.ExpensesModule) },
-  { path: '**', redirectTo: 'internal/auth' },
+  { path: '**', redirectTo: 'internal' },
 ];
 
 @NgModule({
