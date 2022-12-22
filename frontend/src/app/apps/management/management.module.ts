@@ -25,7 +25,7 @@ import { DxDataGridModule, DxButtonModule } from 'devextreme-angular';
     InvoicesComponent,
     VendorsComponent,
     UserAccountsComponent,
-    ApprovalsComponent
+    ApprovalsComponent,
   ],
   imports: [
     CommonModule,

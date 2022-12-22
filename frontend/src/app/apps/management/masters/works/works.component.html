@@ -1,5 +1,5 @@
 <div class="ds-card grid">
-    <dx-data-grid class="p-8 flow" id="gridContainer" [wordWrapEnabled]="true" [dataSource]="rowData"
+    <dx-data-grid class="p-8 flow" id="gridContainer" [wordWrapEnabled]="true" [dataSource]="works_info"
         [remoteOperations]="false" [allowColumnReordering]="true" [rowAlternationEnabled]="true"
         [allowColumnResizing]="true" [showColumnLines]="true" [showRowLines]="true" [showBorders]="true"
         style="width:100%" (onToolbarPreparing)="(permissions.insrt_in==1)?onToolbarPreparing($event):false">
@@ -23,13 +23,13 @@
         <dxi-column [showInColumnChooser]="false" [visible]="(permissions.updt_in==1)?true:false" type="buttons"
             [width]="100" cellTemplate="viewTemplate">
             <div *dxTemplate="let data of 'viewTemplate'">
-                <div class="tblEdtBtn" (click)="openSideBarEdit('edit',data.data)">
+                <div class="tblEdtBtn" (click)="edit('edit',data.data)">
                     Edit Work
                 </div>
             </div>
         </dxi-column>
         <dxi-column [showInColumnChooser]="false" type="button1" [width]="100" cellTemplate="EditTemplate">
-            <div *dxTemplate="let data of 'EditTemplate'" (click)="openSideBarEdit('go',$event)">
+            <div *dxTemplate="let data of 'EditTemplate'" (click)="edit('view',data.data)">
                 <div class="cursor-pointer tblEdtBtn">
                     View Work
                 </div>
@@ -37,13 +37,13 @@
         </dxi-column>
     </dx-data-grid>
 </div>
-<nz-drawer [nzBodyStyle]="{ overflow: 'auto' }" [nzMaskClosable]="true" [nzWidth]="720" [nzVisible]="showForm"
+<nz-drawer [nzBodyStyle]="{ overflow: 'auto' }" [nzMaskClosable]="true" [nzWidth]="720" [nzVisible]="visible"
   [nzTitle]="drawerTitle" [nzFooter]="footerTpl" (nzOnClose)="close()" [nzClosable]="false" [nzCloseIcon]="icon"
   [nzExtra]="icon">
   <ng-template #icon>
     <i (click)="close()" class="fa-solid fa-circle-xmark"></i>
   </ng-template>
-  <form nz-form *nzDrawerContent [formGroup]="worksForm" class="drawer-form">
+  <form nz-form *nzDrawerContent [formGroup]="workForm" class="drawer-form">
     <div>
       <nz-form-item>
         <nz-form-label nz-col nzSpan="5" class="required">Work Name</nz-form-label>
@@ -65,10 +65,10 @@
       <button nz-button style="margin-right: 8px" (click)="close()">
         Cancel
       </button>
-      <button nz-button *ngIf="submit" nzType="primary" (click)="submitForm()">
+      <button nz-button *ngIf="submit" nzType="primary" (click)="onCreateSubmit()">
         Submit
       </button>
-      <button nz-button *ngIf="!submit" nzType="primary" (click)="updateForm()">
+      <button nz-button *ngIf="!submit && updateBtnDisable" nzType="primary" (click)="onUpdateSubmit()">
         Update
       </button>
     </div>

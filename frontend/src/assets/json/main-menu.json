@@ -11,7 +11,7 @@
       "icon": "user",
       "children":[
         {"title":"Tender Details",
-          "path":"/internal/management/tender/tender-details",
+          "path":"/internal/management/tender/create-tender",
           "icon": "user"
         },
         {
