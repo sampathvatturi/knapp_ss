@@ -5,10 +5,13 @@ import { Chat } from '../interfaces/chat.type';
 import { Files } from '../interfaces/file-manager.type';
 import { Mail } from '../interfaces/mail.type';
 import { ProjectList } from '../interfaces/project-list.type';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class AppsService {
   constructor(private http: HttpClient) { }
+
+  apiUrl = environment.apiUrl;
 
   public getChatJSON(): Observable<Chat[]> {
     return this.http.get<Chat[]>("./assets/data/apps/chat-data.json")
@@ -39,17 +42,17 @@ export class AppsService {
   }
   post(postdata: any, rte: string | string[]) {
     if (rte.indexOf("http") > -1) {
-      return this.http.post(`${rte}`, postdata);
+      return this.http.post(this.apiUrl+`${rte}`, postdata);
     } else {
-      return this.http.post(`/${rte}`, postdata);
+      return this.http.post(this.apiUrl+`/${rte}`, postdata);
     }
   }
   get(rte: string | string[]) {
     console.log("GET route ::" + rte)
     if (rte.indexOf("http") > -1) {
-      return this.http.get(`${rte}`);
+      return this.http.get(this.apiUrl+`${rte}`);
     } else {
-      return this.http.get(`/${rte}`);
+      return this.http.get(this.apiUrl+`${rte}`);
     }
 
   }
